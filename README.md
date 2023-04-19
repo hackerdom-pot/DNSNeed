@@ -1,7 +1,7 @@
-**MSDNSScan** is used to identify DNS records for target domains, check for zone transfers and conduct subdomain enumeration. There really isn't much special about it, and it's a lot like other tools you see installed on Kali. The goal is to implement some custom tooling into a "MayorSec Toolkit" to be released sometime in the future.
+**DNSNeed** is used to identify DNS records for target domains, check for zone transfers and conduct subdomain enumeration. There really isn't much special about it, and it's a lot like other tools you see installed on Kali. The goal is to implement some custom tooling into a "MayorSec Toolkit" to be released sometime in the future.
 
 Usage
-Installing MSDNSScan
+Installing DNSNeed
 
 git clone https://github.com/gokulash123/DNSNeed.git
 
