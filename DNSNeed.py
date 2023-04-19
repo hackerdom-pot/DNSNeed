@@ -13,7 +13,7 @@ global subdom_file
 def options():
     opt_parser = argparse.ArgumentParser(formatter_class=argparse.RawDescriptionHelpFormatter, epilog=textwrap.dedent(
         '''Example: python3 msdnsscan.py -d example.com -a
-Example: python3 msdnsscan.py -d example.com -s
+Example: python3 DNSNeed.py -d example.com -s
 '''))
     requiredNamed = opt_parser.add_argument_group('required arguments')
     requiredNamed.add_argument(
@@ -61,9 +61,8 @@ def banner():
     print('╚═╝     ╚═╝╚══════╝╚═════╝ ╚═╝  ╚═══╝╚══════╝╚══════╝ ╚═════╝╚═╝  ╚═╝╚═╝  ╚═══╝\n')
     print('                        DNS and Subdomain Enumeration Tool                     ')
     print('                                   Version 1.0.0                               ')
-    print('                               A project by The Mayor                          ')
+    print('                               A project by The Gokuleswaran B                 ')
     print('                    python3 msdnsscan.py -d <domain> -a to start             \n')
-    print('        Recommend the Bitquark 100000 Wordlist at https://upto.site/717c9    \n'+ Style.RESET_ALL) 
     print("-" * 79)
 
 
@@ -75,7 +74,7 @@ def main():
         domain = args.domain
     except IndexError:
         print(
-            fail + f'\n[warn] You did not enter a domain. Syntax is python3 msdnsscan.py <domain>.')
+            fail + f'\n[warn] You did not enter a domain. Syntax is python3 DNSNeed.py <domain>.')
         quit()
     for records in record_types:
         try:
@@ -191,7 +190,7 @@ def run():
         main(),zone_transfer(),subdom_finder()
     else:
         print(
-            fail + f'\n[syntax error] Please include options. Ex - python3 msdnsscan.py -d example.com --dns.\n')
+            fail + f'\n[syntax error] Please include options. Ex - python3 DNSNeed.py -d example.com --dns.\n')
         quit()
     print(info + f'\n[info] Enumeration for {args.domain} completed.\n')
 
